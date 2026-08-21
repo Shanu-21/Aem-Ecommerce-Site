@@ -1,1 +1,3 @@
 # Aem-Ecommerce-Site
+
+An e-commerce website developed using Adobe Experience Manager (AEM) 6.5, featuring reusable components, structured content, and responsive UI. This project demonstrates AEM development concepts and e-commerce site implementation.
