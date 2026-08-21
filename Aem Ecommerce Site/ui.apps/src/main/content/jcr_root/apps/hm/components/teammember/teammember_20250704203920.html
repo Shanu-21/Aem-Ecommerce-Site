@@ -1,0 +1,19 @@
+<h1> Team Members </h1>
+
+<div data-sly-use.teamcomponent="com.hm.aem.core.models.TeamComponent">
+  <ul data-sly-list.member="${teamcomponent.teammember}">
+    <li>
+      <p>Name = ${member.membername}</p>
+      <p>Image Path = ${member.memberimage}</p>
+      <p>Designation = ${member.memberdesgination}</p>
+    </li>
+  </ul>
+</div>
+
+<h1> ------Learn AEM------- </h1>
+<div data-sly-use.learn="com.hm.aem.core.models.LearnAem">
+  <p>MyData = ${learn.myData}</p>
+  <p>Page Path = ${learn.pagePath}</p>
+  <p>Page Title = ${learn.pageTitle}</p>
+
+</div>

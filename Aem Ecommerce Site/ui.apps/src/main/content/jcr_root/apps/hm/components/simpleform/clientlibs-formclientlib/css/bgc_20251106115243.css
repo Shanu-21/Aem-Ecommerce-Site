@@ -1,0 +1,11 @@
+
+/* Apply light blue background to the dialog */
+.coral-Dialog {
+    background-color: red;  /* light blue */
+}
+
+/* Optional: style the dialog title bar */
+.coral-Dialog-header {
+    background-color: #b3d9ff;
+    color: #003366;
+}

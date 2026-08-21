@@ -1,0 +1,20 @@
+.team-carousel{
+    width: 100%;
+    margin: auto;
+}
+
+.team-member{
+
+    text-align: center;
+
+}
+
+.team-photo{
+
+width: 100%;
+border-radius: 50%;
+max-width: 150px;
+margin: auto;
+display: block;
+
+}

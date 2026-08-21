@@ -1,0 +1,22 @@
+<h1> ${properties.title} </h1>
+
+
+<div data-sly-use.wmodel = "com.hm.aem.core.models.Weatherdata"> </div>
+
+<p> Title : ${wmodel.title}</p>
+<p> CityName : ${wmodel.cityname}</p>
+<p> User ID : ${wmodel.UserID}</p>
+<p>ID : ${wmodel.id}</p>
+<p>Name : ${wmodel.name}</p>
+<p>Color : ${wmodel.color}</p>
+<p>Capacity: ${wmodel.capacity}</p>
+
+
+<h1>------Page Details ---------</h1>
+
+<div data-sly-use.pagemodel="com.hm.aem.core.models.PageManagerData"></div>
+
+<p> Page Path : ${pagemodel.pagepath}</p>
+<p> Page Name : ${pagemodel.pagename}</p>
+
+

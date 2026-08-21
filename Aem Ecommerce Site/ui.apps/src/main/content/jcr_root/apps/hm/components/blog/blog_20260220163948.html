@@ -1,0 +1,33 @@
+<!-- Bind the Sling Model to a variable "blog" -->
+<sly data-sly-use.blog="com.hm.aem.core.models.BlogModel" />
+
+Hello working
+
+<div class="blog-component">
+
+    <p>test</p>
+    
+    <!-- Check if blogList has items  -->
+    <sly data-sly-test="${blog.blogList && !blog.blogList.empty}">
+        <ul class="blog-list">
+            <sly data-sly-list.item1="${blog.blogList}">
+                <li class="blog-item">
+                    <!-- Blog title linking to page -->
+                    <a href="${item1.path @ context='uri'}" class="blog-title">
+                         ${item1.title @ context='text'}
+                    </a>
+                    <!-- Published date -->
+                    <span class="blog-date">
+                        ${item1.publishedDate @ context='text'}
+                    </span>
+                </li>
+            </sly>
+        </ul>
+    </sly>
+
+    <!-- Empty state -->
+    <sly data-sly-test="${!blog.blogList || blog.blogList.empty}">
+        <p class="no-blogs">No recent blog posts available.</p>
+    </sly>
+
+</div>

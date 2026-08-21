@@ -1,0 +1,32 @@
+.team-carousel{
+    width: 100%;
+    margin: auto;
+}
+
+.team-member{
+
+    text-align: center;
+
+}
+
+.team-photo{
+
+width: 100%;
+border-radius: 50%;
+max-width: 150px;
+margin: auto;
+display: block;
+
+}
+
+.team-name{
+ font-weight: bold;
+ margin-top: 10px;
+
+}
+
+.team-designation{
+ font-style: italic;
+ color: #666;
+
+}

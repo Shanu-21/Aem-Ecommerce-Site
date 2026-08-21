@@ -1,0 +1,27 @@
+<p> Related Article Pages </p>
+
+<div class="cmp-relatedArticlePages">
+    <sly data-sly-use.ArticleResult="com.hm.aem.core.models.RelatedArticlePages"></sly>
+     <h1>Page Root Path : ${ArticleResult.rootPath}</h1>
+
+     <div class="cmp-relatedArticlePages-list">
+     <sly data-sly-test="${!ArticleResult.rootPath || ArticleResult.rootPath.empty}">
+        <p> No Article Pages to Show </p>
+     </sly>
+
+     <sly data-sly-test="${ArticleResult.rootPath && !ArticleResult.rootPath.empty}">
+        <h1>Max Result : ${ArticleResult.maxResult}</h1>
+        <ul>            
+            <sly data-sly-list.myList="${ArticleResult.tagResult}">
+                <li>Page Title : ${myList.title}</li>
+                <li>Page Path : ${myList.path}</li>
+            </sly>
+        </ul>
+
+     </sly>
+     </div>
+
+    
+
+
+</div>

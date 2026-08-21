@@ -1,0 +1,36 @@
+<div data-sly-use.newform="com.hm.aem.core.models.SimpleForm">
+  <h1>${newform.formtitle}</h1>
+  <div id="thankYouMessage" style="display:none;color:green;">
+    <h1> Thank you! Your submission has been received </h1>
+  </div>
+
+  <form id="simpleForm">
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("simpleForm").addEventListener("submit", function(e){
+    e.preventDefault(); // stop full page submit
+
+    var formData = new FormData(this);
+
+    fetch('${newform.actionPath}', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text()) // or JSON if your servlet returns JSON
+    .then(data => {
+        // Show thank you message
+        document.getElementById("thankYouMessage").style.display = 'block';
+        // Reset the form
+        document.getElementById("simpleForm").reset();
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Something went wrong. Please try again.");
+    });
+});
+</script>

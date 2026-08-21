@@ -1,0 +1,10 @@
+/* Change background of dialog body */
+.coral3-Dialog-content {
+    background-color: #ffe6e6 !important; /* light red */
+}
+
+/* Change dialog header */
+.coral3-Dialog-header {
+    background-color: #ff9999 !important;
+    color: #000 !important;
+}

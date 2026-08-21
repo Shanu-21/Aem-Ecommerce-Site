@@ -1,0 +1,10 @@
+<h1> Conext Aware config </h1>
+
+<div data-sly-use.contextcompo="com.hm.aem.core.models.ContextAwareModel"> 
+    <h1> Site : ${contextcompo.hmsite}</h1>
+    
+    <h1> Country : ${contextcompo.hmcountry @ context='text'}</h1>
+    <h1> Label : ${contextcompo.hmlocale @ context='text'}</h1>
+    <h1> Properties :${properties.username}</h1>
+   
+    </div>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-04-18T23:20:19.482+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2025-09-23T17:22:59.857+05:30"
+        cq:lastReplicatedBy="workflow-process-service"
+        cq:lastReplicationAction="Deactivate"
+        cq:template="/conf/hm/settings/wcm/templates/homepage-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Teest template"
+        sling:resourceType="hm/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hm/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hm/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:lastModified="{Date}2025-04-18T23:19:15.773+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="HELLO PAGE TEMPLATE - HOME Page"
+                    sling:resourceType="hm/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hm/components/container"
+                    layout="responsiveGrid"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

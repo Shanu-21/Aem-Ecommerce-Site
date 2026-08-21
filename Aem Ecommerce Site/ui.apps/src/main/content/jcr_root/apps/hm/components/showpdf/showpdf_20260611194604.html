@@ -1,0 +1,32 @@
+<sly data-sly-use.showpdfdetails="com.hm.aem.core.models.ShowPdfModel" />
+<div class="pdfViewer">
+    <sly data-sly-test="${showpdfdetails.validPdf}">
+     <h2 data-sly-test="${showpdfdetails.pdfTitle}" class="cmp-showpdf_title">
+        ${showpdfdetails.pdfTitle}
+     </h2>
+
+     <div class="cmp-showpdf_inlineViewFrame">
+        <iframe
+        src="${showpdfdetails.pdfPath @context='uri'}.html"
+        width="100%"
+        height="600"
+        title="${showpdfdetails.pdfTitle}">
+    </iframe>
+     
+     </div>
+
+
+     <div data-sly-test="${showpdfdetails.showDownload}" class="cmp-showpdf_showDownloadbutton">
+      <a 
+         href="${showpdfdetails.pdfPath @ context='uri'}"
+         class="cmp-showpdf_action">Download PDF</a>
+     </div>
+
+
+    </sly>
+
+    <div data-sly-test="${!showpdfdetails.validPdf}" class="cmp-showpdf_placeholder">
+      Selected Asset is not a valid PDF.
+    </div>
+
+</sly>

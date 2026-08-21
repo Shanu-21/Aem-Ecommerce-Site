@@ -1,0 +1,12 @@
+<h1> Team Members </h1>
+
+<div data-sly-use.teamcomponent="com.hm.aem.core.models.TeamComponent">
+  <ul data-sly-list.teammember="${teamcomponent.teammember}">
+    <li>
+      <p>Name = ${teammember.membername}</p>
+      <p>Image Path = ${teammember.memberimage}</p>
+      <p>Designation = ${teammember.memberdesgination}</p>
+    </li>
+  </ul>
+</div>
+

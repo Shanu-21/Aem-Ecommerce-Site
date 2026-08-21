@@ -1,0 +1,25 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='hm.backgroundcolor'}"/>
+
+</sly>
+
+
+
+<div class="bg-${properties.backgroundcolor || 'white'}">
+
+<div style="color:red">
+
+<h1> This is my Coponent </h1>
+
+<div data-sly-resource="${container1}" data-sly-resource-type="/apps/hm/components/container">
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>

@@ -1,0 +1,53 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='hm.userdetailsclientlibs'}"/>
+
+</sly>
+
+<div class="cmp-userdetails-card" >
+
+
+<div data-sly-use.usermodel="com.hm.aem.core.models.UserDetails">
+
+
+
+    <div class = "cmp-username-card" > <h2> User Name: ${usermodel.username} </h2> </div>
+    <p>Designation: ${usermodel.userdesignation} </p>
+    <p>Contact: ${usermodel.usercontact} </p>
+    <img src="${usermodel.assetsfolder}" alt=""/>
+    <h2> Gender : ${usermodel.gender}</h2>
+    <h2> Player name : ${Properties.player}</h2>
+
+    </hr>
+
+    <p>API KEY: ${usermodel.ApiKey} </p>
+    <p>API URL: ${usermodel.ApiUrl} </p>
+
+
+
+
+</div>
+
+</div>
+
+<div> <h1>Testing - Learn AEM Model </h1></div>
+
+<div data-sly-use.learn ="com.hm.aem.core.models.LearnAem">
+
+    <h1>Mydata = ${learn.myData}</h1>
+    <h1>pagePath = ${learn.pagePath}</h1>
+
+    <ul>
+        <li> Child Data = ${learn.mychildData} </li>
+    </ul>
+
+    <p> Page Title = ${learn.pageTitle}</p>
+    </p>
+</div>
+
+
+
+
+
+
+
+

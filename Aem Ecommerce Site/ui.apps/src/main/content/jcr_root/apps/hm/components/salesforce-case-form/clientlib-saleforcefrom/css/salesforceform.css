@@ -1,0 +1,16 @@
+.salesforceFormComponent{
+
+    background-color: rgb(14, 14, 14);
+    max-width: 500px;
+    padding: 20px;
+    color: white;
+    margin: 0 auto;
+}
+
+#SupportCaseForm{
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+

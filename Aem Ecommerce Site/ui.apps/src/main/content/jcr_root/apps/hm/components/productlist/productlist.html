@@ -1,0 +1,37 @@
+<h2> Product list component </h2>
+${properties.productname @ context='html'}
+${properties.productid}
+
+${resource.path}
+<div data-sly-list.pList=${resource.getChildren}>
+${pList.name}
+<div data-sly-test.isNodeNameCorrect = "${pList.name == 'productitems'}">
+<div data-sly-list.eachList=${pList.getChildren}>
+${eachList.name}  :${eachList.path} </br>
+Title: ${eachList.producttitle} , </br>
+Image : ${eachList.productimage} </br>
+
+<h1>Title: ${eachList.producttitle} , </br></h1>
+<img src="${eachList.productimage}" alt=""/>
+
+</div>
+
+</div>
+
+</div>
+
+</hr>
+<h1> Sling Model Example </h1>
+
+<div data-sly-use.model8 = "com.hm.aem.core.models.ProductList">
+
+<div data-sly-list.each = "${model8.productItem}">
+
+<h1> Product Title : ${each.producttitle} </h1> </br>
+<h1> Product Image : ${each.productimage} </h1></br>
+${eachitem.path}
+
+
+
+</div>
+</div>

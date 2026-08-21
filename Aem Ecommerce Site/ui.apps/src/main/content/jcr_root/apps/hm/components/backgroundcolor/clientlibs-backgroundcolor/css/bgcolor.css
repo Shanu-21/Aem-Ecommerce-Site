@@ -1,0 +1,20 @@
+.bg-blue{
+
+    background-color: blue;
+    font-size: 50px;
+    
+}
+
+.bg-green{
+
+    background-color: green;
+    font-size: 10px;
+    min-height: 200px;
+}
+
+.bg-white{
+
+    background-color: white;
+    font-size: 30px;
+    min-height: 200px;
+}

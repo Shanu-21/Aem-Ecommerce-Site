@@ -1,0 +1,43 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='hm.faqclientlibs'}" />
+
+
+<div data-sly-use.faq="com.hm.aem.core.models.FaqComponent" >
+
+<div class="FaqComponent">
+<ul class="faq-list">   
+
+<sly data-sly-list.item= "${faq.itemlist}" >
+
+<li class="faq-item">
+<button class="faq-question" aria-expanded="true" >
+ ${item.question}
+
+</button>
+
+<div class="faq-answer hidden">
+${item.answer}
+
+</div>
+</li>
+</sly>
+</ul>
+</div>
+</div>
+
+
+<div data-sly-use.example1="com.hm.aem.core.models.FaqComponent">
+<sly data-sly-template-mytemplate = "${name='shanu'}">
+<h1> Hello , ${name} </h1>
+
+</sly>
+
+<sly data-sly-call="${mytemplate @ name = 'somesh'}"></sly>
+    <sly data-sly-call="${mytemplate}"></sly>
+
+
+
+
+
+
+</div>

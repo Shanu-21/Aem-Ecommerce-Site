@@ -1,0 +1,8 @@
+<form data-sly-use.myform="com.example.core.models.SimpleForm"
+      action="${myform.actionPath}"
+      method="POST">
+  <h1>{myform.formtitle}</h1>
+  <input type="text" name="name" placeholder="Enter Name" required>
+  <input type="email" name="email" placeholder="Enter Email" required>
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="User Details"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem_cmp_text_v2"
+    trackingFeature="core-components:text:v2">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        granite:class="cq-RichText-FixedColumn-column"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <username
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                emptyText="Enter UserName"
+                                                fieldDescription="Please Provide User Name"
+                                                fieldLabel="User Name"
+                                                name="./username"
+                                                validation="html-unique-id-validator"/>
+                                            <userdesignation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please Provide User Designation"
+                                                fieldLabel="User Designation"
+                                                name="./userdesignation"
+                                                validation="html-unique-id-validator"/>
+                                            <usercontact
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="provide User Contact Details"
+                                                fieldLabel="User Contact"
+                                                name="./contact"
+                                                validation="html-unique-id-validator"
+                                                value="${not empty cqDesign.startLevel ? cqDesign.startLevel : 2}"/>
+                                            <assetsfolder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Assets folder path"
+                                                fieldLabel="Asset Folder"
+                                                name="./assetsfolder"
+                                                rootPath="/content/dam"
+                                                validation="html-unique-id-validator"
+                                                wrapperClass="cmp-image__editor-link"/>
+                                            <gender
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Sort order ascending or descending"
+                                                fieldLabel="Gender"
+                                                name="./gender"
+                                                type="editable">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <male
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Male"
+                                                        value="male"/>
+                                                    <female
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Female"
+                                                        value="female"/>
+                                                    <other
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Other"
+                                                        value="other"/>
+                                                </items>
+                                            </gender>
+                                            <player
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                datasource="/etc/acs-commons/lists/player-name"
+                                                fieldDescription="Sort order ascending or descending"
+                                                fieldLabel="Player Name"
+                                                name="./player"
+                                                type="editable">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                                    path="/etc/acs-commons/lists/player-name"/>
+                                            </player>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <styletab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,13 @@
+.faq-answer.hidden {
+    display: none;
+}
+
+.faq-question {
+
+        color: blue;
+    }
+.faq-answer {
+    padding: 10px;
+    border-left: 3px solid #ddd;
+    background-color: black;
+}

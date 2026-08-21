@@ -1,0 +1,20 @@
+<p> HM Product Component</p>
+
+<div class="cmp_hmProduct">
+<div data-sly-use.hmProductData="com.hm.aem.core.models.HmProduct">
+<p>Prouct ID : ${hmProductData.productId}</p>
+<div class="cmp_hmproduct_CF">
+Product Description: ${hmProductData.productDescription @ context = 'html'}
+<img src="${hmProductData.hmProductImage}" alt="HM Product Image"/>
+</div>
+
+<sly data-sly-test="${hmProductData.hmProductDetailsDto}">
+<h2>Product Title: ${hmProductData.hmProductDetailsDto.title}</h2>
+<p>Category: ${hmProductData.hmProductDetailsDto.category}</p>
+<p>Price: ${hmProductData.hmProductDetailsDto.price}</p>
+<p>Discount Percentage: ${hmProductData.hmProductDetailsDto.discountPercentage}</p>
+<p>Rating: ${hmProductData.hmProductDetailsDto.rating}</p>
+<p>Stock: ${hmProductData.hmProductDetailsDto.stock}</p>
+</sly>
+</div>
+</div>

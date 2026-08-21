@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='hm.teammemberclientlibs'}" />
+
+<h1> Team Members </h1>
+
+<div class="team-carousel">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div data-sly-use.teamcomponent="com.hm.aem.core.models.TeamComponent">
+  <sly data-sly-list.member="${teamcomponent.teammember}">
+  <div class ="swiper-slide team-member">
+  <img src="${member.memberimage}" alt="${member.membername @ context = 'text'}" class="team-photo" />
+  <h3 class = "team-name">${member.membername @context = 'text'}</h3>
+  <h3 class = "team-designation">${member.memberdesgination @context = 'text'}</h3>   
+  </div>
+
+</sly>
+</div>
+</div>
+
+
+<!--navigation Arrow--->
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+
+</div>
+</div>

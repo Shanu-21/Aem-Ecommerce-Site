@@ -1,0 +1,26 @@
+<div>
+
+    <h1> ${properties.title} </h1>
+    <h1> ${properties.text @ context='html'} </h1>
+    
+    
+    </div>
+
+    <hr/>
+
+    <div data-sly-use.tmodel = "com.hm.aem.core.models.Textdesc" > 
+    <h1> ${tmodel.title} </h1>
+    <h2>Gender : ${tmodel.gender}  </h2>
+    <h1> Student Name : ${tmodel.studentName}</h1>
+    <h1> Student RollNumber : ${tmodel.RollNumber}</h1>
+    <h1> Regular : ${tmodel.regular}</h1>
+    <h1> Subjects: ${tmodel.subject}</h1>
+    <h1> Countries: ${tmodel.countries}</h1>
+
+
+    
+    </div>
+    
+   
+
+    
